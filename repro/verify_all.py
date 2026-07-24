@@ -226,4 +226,27 @@ _dump("verdict.json", dict(verdicts=verdicts, n_verified=n_ok, n_total=len(verdi
                            seed=SEED, K=K, n=n, L=L, d_linear=d_lin, d_relu=d_relu,
                            lam_W=lam_W, lam_H=lam_H))
 print("  wrote outputs/verdict.json and outputs/claim*.json [+csv] and outputs/images/*.png")
+
+# Persist raw evidence to the HF Space (only inside the HF job, where HF_TOKEN is set)
+import os as _os
+_tok = _os.environ.get("HF_TOKEN") or _os.environ.get("HUGGING_FACE_HUB_TOKEN")
+if _tok:
+    try:
+        import subprocess
+        sha = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode().strip()
+        from huggingface_hub import HfApi
+        api = HfApi(token=_tok)
+        for fn in _os.listdir(OUT):
+            p = _os.path.join(OUT, fn)
+            if _os.path.isfile(p):
+                api.upload_file(path_or_fileobj=p, path_in_repo=f"runs/{sha}/{fn}",
+                                repo_id="DineshAI/RwiGcN2feP", repo_type="space")
+        for fn in _os.listdir(_os.path.join(OUT, "images")):
+            p = _os.path.join(OUT, "images", fn)
+            api.upload_file(path_or_fileobj=p, path_in_repo=f"runs/{sha}/images/{fn}",
+                            repo_id="DineshAI/RwiGcN2feP", repo_type="space")
+        print(f"  uploaded raw evidence to DineshAI/RwiGcN2feP::runs/{sha}/")
+    except Exception as e:
+        print(f"  [warn] evidence upload skipped: {e}")
+
 sys.exit(0 if n_ok == len(verdicts) else 1)
