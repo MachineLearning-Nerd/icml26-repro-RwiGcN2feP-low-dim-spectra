@@ -1,0 +1,16 @@
+[project]
+name = "low-dim-spectra-repro"
+version = "0.1.0"
+description = "Faithful reproduction of 'Unifying Low Dimensional Observations in Deep Learning through the Deep Linear Unconstrained Feature Model' (arXiv 2404.06106, OpenReview RwiGcN2feP)."
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy>=1.26,<3.0",
+    "scipy>=1.11,<2.0",
+    "jax>=0.4.25,<0.6",
+    "jaxlib>=0.4.25,<0.6",
+    "matplotlib>=3.8,<4.0",
+    "pyyaml>=6.0,<7.0",
+]
+
+[tool.uv]
+# CPU-only, single repository-level environment reused across all experiment nodes.
