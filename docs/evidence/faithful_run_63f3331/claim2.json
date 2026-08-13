@@ -1,0 +1,17 @@
+{
+  "verdict": "VERIFIED",
+  "checks": {
+    "within_zero": true,
+    "cross_rank": true,
+    "class_rank": true,
+    "equal_class": true,
+    "equal_cross": true,
+    "orthogonal": true
+  },
+  "rank_within": 0,
+  "rank_cross": 6,
+  "rank_class": 3,
+  "eig_class_ratio": 1.0,
+  "eig_cross_ratio": 1.0000000000000002,
+  "class_cross_ortho": 5.793524825470988e-18
+}

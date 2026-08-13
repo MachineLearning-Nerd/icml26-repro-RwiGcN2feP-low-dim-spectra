@@ -1,0 +1,20 @@
+{
+  "verdicts": {
+    "claim1": "VERIFIED",
+    "claim2": "VERIFIED",
+    "claim3": "VERIFIED",
+    "claim4": "VERIFIED",
+    "claim5": "VERIFIED",
+    "claim6": "VERIFIED"
+  },
+  "n_verified": 6,
+  "n_total": 6,
+  "seed": 20240406,
+  "K": 3,
+  "n": 40,
+  "L": 5,
+  "d_linear": 60,
+  "d_relu": 65,
+  "lam_W": 0.01,
+  "lam_H": 0.01
+}

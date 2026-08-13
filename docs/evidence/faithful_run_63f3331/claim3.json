@@ -1,0 +1,13 @@
+{
+  "verdict": "VERIFIED",
+  "checks": {
+    "k_nonzero": true,
+    "equal": true,
+    "offdiag_zero": true
+  },
+  "diag_mean": 0.3333333333333333,
+  "diag_ratio": 1.0,
+  "offdiag_max": 0.0,
+  "n_nonzero": 3,
+  "diag_target": 0.3333333333333333
+}

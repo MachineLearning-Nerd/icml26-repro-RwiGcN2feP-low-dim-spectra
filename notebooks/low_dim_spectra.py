@@ -19,14 +19,15 @@ def _():
     mo.md(
         """# Unifying Low-Dimensional Spectra in Deep Learning
 
-        **arXiv 2404.06106 · OpenReview RwiGcN2feP — 6/6 claims VERIFIED (CPU).**
+        **arXiv 2404.06106v1 · OpenReview RwiGcN2feP — 6/6 scoped checks pass (CPU).**
 
         The paper asks *why* a deep network's Hessian, gradient, and weight spectra are
         dominated by a handful of **outlier eigenvalues** whose count equals the number
         of classes `K`. Its answer: at convergence the network undergoes **Deep Neural
         Collapse (DNC)**, and that collapse *forces* the low-dimensional spectra. We
-        reproduce the four theorems (4.1–4.4) and both empirical figures at the paper's
-        own scale (`K=3, d=60, n=40, L=5`)."""
+        reproduce the four v1 theorems (4.1–4.4) and both empirical figures at the
+        pinned protocol (`K=3, d=60, n=40, L=5`). The strict paper-level gate remains
+        closed because the training horizons and current arXiv revision differ."""
     )
     return (mo,)
 
@@ -101,7 +102,6 @@ def _(mo):
         """## Reproduce
 
         ```bash
-        git checkout orx/baseline-faithful-spectra
         bash repro/run.sh    # uv sync --frozen && uv run python -m repro.verify_all
         ```
 

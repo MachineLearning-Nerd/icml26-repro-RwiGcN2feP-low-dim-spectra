@@ -1,8 +1,13 @@
 # Unifying Low-Dimensional Spectra in Deep Learning — Reproduction Report
 
-**Paper:** *Unifying Low Dimensional Observations in Deep Learning through the Deep
-Linear Unconstrained Feature Model* (arXiv [2404.06106](https://arxiv.org/abs/2404.06106),
-OpenReview `RwiGcN2feP`). **Result: 6 / 6 claims VERIFIED** (CPU-only).
+**Paper:** *Unifying Low Dimensional Observations in Deep Learning Through the Deep
+Linear Unconstrained Feature Model* ([arXiv 2404.06106v1](https://arxiv.org/abs/2404.06106v1),
+OpenReview `RwiGcN2feP`). **Scoped result: 6 / 6 claim checks pass** (CPU-only).
+
+The strict paper-level gate remains closed: the current [arXiv v3 record](https://arxiv.org/abs/2404.06106)
+is retitled and renumbered, Claim 5 uses 30,000 epochs, and Claim 6 uses 150,000
+ReLU epochs rather than the longer paper horizon. The machine-readable decision is
+[`publication_gate.json`](../../publication_gate.json).
 
 ![headline: linear UFM Hessian outliers converge to one value over training](images/claim5_spectrum.png)
 
@@ -85,11 +90,12 @@ non-linear departure the paper reports:
 
 ## Assessment
 
-All six claims reproduce faithfully. The linear-model equality results (Thms 4.1–4.4,
-Claim 5) hold to machine precision; the ReLU departure (Claim 6) reproduces the paper's
-qualitative finding. The only downscale is the ReLU training horizon (150k vs 10⁶
-epochs), which does not affect the qualitative conclusion and is flagged honestly.
+All six scoped claim checks pass. The linear-model equality results (Thms 4.1–4.4,
+Claim 5) hold to machine precision at the balanced representative optimum; the ReLU
+departure (Claim 6) reproduces the paper's qualitative finding. The shorter horizons,
+single optimum representative, and v1/v3 source boundary prevent this from being
+reported as an exact paper-level rerun.
 
-- Experiment branch: [`orx/baseline-faithful-spectra`](https://github.com/MachineLearning-Nerd/icml26-repro-RwiGcN2feP-low-dim-spectra/tree/orx/baseline-faithful-spectra).
+- Faithful source snapshot: [`docs/evidence/faithful_run_63f3331`](../../docs/evidence/faithful_run_63f3331).
 - Evaluator logbook: https://huggingface.co/spaces/DineshAI/RwiGcN2feP
 - Verifier: [`repro/verify_all.py`](../../repro/verify_all.py) · reproduce with `bash repro/run.sh`.

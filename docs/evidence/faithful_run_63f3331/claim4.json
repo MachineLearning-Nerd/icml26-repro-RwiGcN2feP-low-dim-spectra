@@ -1,0 +1,21 @@
+{
+  "verdict": "VERIFIED",
+  "checks": {
+    "rank_K": true,
+    "eigenvalues_match": true,
+    "recurrence": true
+  },
+  "rank": 3,
+  "eig_rel_err": 0.0,
+  "recurrence_err": 0.0,
+  "eigenvalues": [
+    1.8130214144470937,
+    1.8130214144470937,
+    1.8130214144470937
+  ],
+  "predicted": [
+    1.8130214144470937,
+    1.8130214144470937,
+    1.8130214144470937
+  ]
+}

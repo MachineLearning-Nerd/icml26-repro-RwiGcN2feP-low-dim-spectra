@@ -1,0 +1,14 @@
+{
+  "verdict": "VERIFIED",
+  "checks": {
+    "rank_K2": true,
+    "equal": true,
+    "eigvecs": true,
+    "formula_validated": true
+  },
+  "n_nonzero": 9,
+  "eig_ratio": 1.0,
+  "fcc_min": 0.9999999999999999,
+  "fcc_max": 0.9999999999999999,
+  "formula_vs_autodiff": 0.0
+}

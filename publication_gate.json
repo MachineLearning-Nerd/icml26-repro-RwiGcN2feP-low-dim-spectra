@@ -1,8 +1,37 @@
 {
-  "paper": "RwiGcN2feP",
+  "schema_version": 2,
+  "paper": {
+    "openreview": "RwiGcN2feP",
+    "arxiv_reproduced": "2404.06106v1",
+    "arxiv_current": "2404.06106",
+    "title_reproduced": "Unifying Low Dimensional Observations in Deep Learning Through the Deep Linear Unconstrained Feature Model",
+    "title_current": "Unifying Low Dimensional Spectra in Deep Learning",
+    "authors": ["Connall Garrod", "Jonathan P. Keating"]
+  },
+  "overall_status": "VERIFIED_SCOPED_WITH_LIMITATIONS",
+  "publication_gate_passed": false,
+  "scoped_reproduction_gate_passed": true,
   "tests_passed": true,
-  "publication_gate_passed": true,
-  "claims_verified": 5,
+  "claims_verified": 6,
   "claims_total": 6,
-  "arxiv": "2404.06106"
+  "claim_status": {
+    "C1": "VERIFIED_CONDITIONAL",
+    "C2": "VERIFIED_CONDITIONAL",
+    "C3": "VERIFIED_CONDITIONAL",
+    "C4": "VERIFIED_CONDITIONAL",
+    "C5": "REPRODUCED_SCOPED",
+    "C6": "REPRODUCED_SCOPED"
+  },
+  "evidence": {
+    "source_commit": "63f3331909ff0d1832527e582d18263991d9a13e",
+    "command": "bash repro/run.sh",
+    "snapshot": "docs/evidence/faithful_run_63f3331/",
+    "public_mirror": "https://huggingface.co/spaces/DineshAI/RwiGcN2feP/tree/main/runs/63f3331"
+  },
+  "limitations": [
+    "Theorems are checked on one balanced, rotation-representative global optimum.",
+    "Claim 5 uses 30000 epochs rather than the full paper horizon.",
+    "Claim 6 uses 150000 ReLU epochs rather than 1000000.",
+    "The faithful implementation follows arXiv v1; the current v3 paper is retitled and renumbered."
+  ]
 }

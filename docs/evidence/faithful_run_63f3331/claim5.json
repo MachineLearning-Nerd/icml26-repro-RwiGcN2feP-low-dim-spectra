@@ -1,0 +1,23 @@
+{
+  "verdict": "VERIFIED",
+  "checks": {
+    "outliers_equal": true,
+    "outliers_separate": true,
+    "fcc_rises_to_1": true,
+    "collapse": true
+  },
+  "final": {
+    "step": 30000,
+    "top_ratio": 1.0000000000000084,
+    "fcc_mean": 1.0,
+    "fcc_min": 0.9999999999999997,
+    "dnc1_m": 8.935713563889447e-32
+  },
+  "initial": {
+    "step": 10,
+    "top_ratio": 2.1154206151993775,
+    "fcc_mean": 0.18437587266949887,
+    "fcc_min": 0.14581580734673794,
+    "dnc1_m": 73.2593443595233
+  }
+}
